@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19466" started-at="2017-01-28T02:41:21Z" finished-at="2017-01-28T02:41:41Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19466" started-at="2017-01-28T02:41:21Z" finished-at="2017-01-28T02:41:41Z">
+      <class name="login">
+        <test-method status="PASS" signature="i_want_to_open_FireFox_and_start_application()[pri:0, instance:login@5bcab519]" name="i_want_to_open_FireFox_and_start_application" duration-ms="19398" started-at="2017-01-27T21:41:21Z" finished-at="2017-01-27T21:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- i_want_to_open_FireFox_and_start_application -->
+        <test-method status="PASS" signature="close_the_browser()[pri:0, instance:login@5bcab519]" name="close_the_browser" is-config="true" duration-ms="49" started-at="2017-01-27T21:41:41Z" finished-at="2017-01-27T21:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_the_browser -->
+      </class> <!-- login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
