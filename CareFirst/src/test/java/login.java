@@ -1,5 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -14,7 +15,7 @@ public class login {
 	
 		
 		@Given("^I want to open FireFox and start application$")
-		@Test
+		@Test(priority=1)
 		public void i_want_to_open_FireFox_and_start_application(){
 			driver=new FirefoxDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -22,8 +23,9 @@ public class login {
 		}
 
 		@When("^I click on search button it should click$")
+		@Test(priority=2)
 		public void i_click_on_search_button_it_should_click() {
-		    
+		    driver.findElement(By.xpath(".//*[@id='1442093000057']/div/div[3]/p/a")).click();
 		}
 
 		@Then("^close the browser$")
