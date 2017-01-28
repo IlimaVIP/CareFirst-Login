@@ -1,6 +1,11 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -24,8 +29,12 @@ public class login {
 
 		@When("^I click on search button it should click$")
 		@Test(priority=2)
-		public void i_click_on_search_button_it_should_click() {
+		public void i_click_on_search_button_it_should_click() throws IOException {
 		    driver.findElement(By.xpath(".//*[@id='1442093000057']/div/div[3]/p/a")).click();
+		    
+		    TakesScreenshot ts=(TakesScreenshot)driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFileToDirectory(source, new File("./Screenshots/carefirst.png"));
 		}
 
 		@Then("^close the browser$")
