@@ -28,7 +28,7 @@ public class login {
 		    TakesScreenshot ts=(TakesScreenshot)driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFileToDirectory(source, new File("./Screenshots/carefirst.png"));
-			//add asserton 
+			//add asserton for CareFirst
 		
 		}
 
